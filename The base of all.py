@@ -31,7 +31,7 @@ while True:
             true_c = 1
     print("your number is -  ",choose)
 
-    to_roll = random.randint(10, 15)
+    to_roll = random.randint(5, 10)
     roll = 0.2
     prin = 0
     while to_roll > 1:
@@ -49,7 +49,7 @@ while True:
 
 
         to_roll -= 1
-        time.sleep((15 - to_roll) / 10)
+        time.sleep((10 - to_roll) / 10)
 
         if to_roll == 1:
 
