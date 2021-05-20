@@ -29,7 +29,7 @@ while True:
         choose = int(input("type 1 or 2"))
         if choose == 1 or choose == 2:
             true_c = 1
-    print("u choosed ",choose)
+    print("your number is -  ",choose)
 
     to_roll = random.randint(10, 15)
     roll = 0.2
