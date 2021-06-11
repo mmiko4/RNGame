@@ -1,4 +1,4 @@
-import pygame, time, random
+import time, random
 from pymongo import MongoClient
 U="mongodb+srv://miko:1234@cluster0.qfeqp.mongodb.net/test?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 
