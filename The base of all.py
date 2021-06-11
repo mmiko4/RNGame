@@ -4,14 +4,14 @@ U="mongodb+srv://miko:1234@cluster0.qfeqp.mongodb.net/test?retryWrites=true&w=ma
 
 cluster = MongoClient(U)
 
-name = input("what's your name')
+name = "miko"
 db = cluster["base"]
 collection = db["data"]
 true_c = 0
 while True:
     user = collection.find_one({"name": name})
     coins = user["coins"]
-    print("u have", coins,"coins")
+    print("u have", coins, "coins")
     cant_bet = True
     while cant_bet:
         bet = int(input("how many coins u want to bet?"))
@@ -50,7 +50,7 @@ while True:
 
 
         to_roll -= 1
-        time.sleep((10 - to_roll) / 10)
+        time.sleep((10 - to_roll) / 30)
 
         if to_roll == 1:
 
@@ -58,10 +58,10 @@ while True:
             to_roll -= 1
 
     if prin == choose:
-        print("u won",bet,"coins!!!!!!")
+        print("u won", bet, "coins!!!!!!")
         collection.update_one({"name": name}, {"$set": {"coins": coins + bet}})
     if prin != choose:
-        print("u lose",bet,"coins, try again")
+        print("u lose", bet, "coins, try again")
         collection.update_one({"name": name}, {"$set": {"coins": coins - bet}})
 
 
